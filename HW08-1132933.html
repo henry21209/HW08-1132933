@@ -3,19 +3,22 @@
  <head>
  <meta charset="utf-8" />
  <meta name="viewport" content="width=device-width, initial-scale=1" />
- <title>XO 井字棋 — 雙人對戰</title>
+ <title>1132933-HW08</title>
  <link rel="stylesheet" href="styles.css">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap">
  </head>
  <body>
     <main class="container">
     <h1>XO 井字棋</h1>
+    
     <div class="status">
-    <span>目前輪到：<strong id="turn">X</strong></span>
-    <span id="state"></span>
+        <span>目前輪到：<strong id="turn">X</strong></span>
+        <span id="state" role="status" aria-live="polite">請開始遊戲</span> 
     </div>
+    
     <section id="board" class="board" aria-label="井字棋棋盤">
-     <!-- 棋盤容器 (9 格) -->
-        <button class="cell" data-idx="0" ></button>
+     <div id="win-line" class="win-line"></div> 
+     <button class="cell" data-idx="0" ></button>
         <button class="cell" data-idx="1" ></button>
         <button class="cell" data-idx="2" ></button>
         <button class="cell" data-idx="3" ></button>
@@ -25,19 +28,20 @@
         <button class="cell" data-idx="7" ></button>
         <button class="cell" data-idx="8" ></button>
     </section>
+    
     <div class="scoreboard">
         <h2>計分板</h2>
         <p>X 勝場：<span id="score-x">0</span></p>
         <p>O 勝場：<span id="score-o">0</span></p>
         <p>平手次數：<span id="score-draw">0</span></p>
-        </div>
+    </div>
         
-     <div class="controls">
-     <button id="reset">重開一局</button>
-     <button id="reset-all">重置計分</button>
-     </div>
-    </main>
-     <script src="script.js" defer></script>
-     </body>
-    </html>
+    <div class="controls">
+        <button id="reset">重開一局</button>
+        <button id="reset-all">重置計分</button>
+    </div>
     
+    </main>
+    <script src="script.js" defer></script>
+ </body>
+</html>
